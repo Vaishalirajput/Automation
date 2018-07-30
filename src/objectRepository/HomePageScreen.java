@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePageScreen {
 
-	@FindBy(linkText="My Appointments")
+	@FindBy(xpath="//android.widget.TextView[@text='My Appointments']")
 	public WebElement appointmentTab; 
 	
 	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/design_bottom_sheet")

@@ -1,5 +1,7 @@
 package tests.Login;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -23,13 +25,13 @@ public class LogInTestBaseClass {
 		System.out.println("driver initialized");
 		loginFlow = new LoginFlowPage(driver);
 		sAssert = new SoftAssert();
-		driver.findElement(By.id("com.mphrx.columbiaAsia.patient.debug:id/btn_skip")).click();
+		loginFlow.launchScreen.skipButton.click();
 	}
     
     @Test
     public void LoginUsingUsername(){
     	loginFlow.homePage.appointmentTab.click();
-    	loginFlow.homePage.loginButton.click();
+       	loginFlow.homePage.loginButton.click();
 
     }
 	
