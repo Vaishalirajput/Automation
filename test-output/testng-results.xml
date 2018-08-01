@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4432" started-at="2018-07-30T14:17:02Z" finished-at="2018-07-30T14:17:06Z">
+  <suite name="Default suite" duration-ms="6755" started-at="2018-07-30T16:54:23Z" finished-at="2018-07-30T16:54:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4432" started-at="2018-07-30T14:17:02Z" finished-at="2018-07-30T14:17:06Z">
+    <test name="Default test" duration-ms="6755" started-at="2018-07-30T16:54:23Z" finished-at="2018-07-30T16:54:30Z">
       <class name="tests.Login.LogInTestBaseClass">
-        <test-method status="PASS" signature="lauchAppforLogin()[pri:0, instance:tests.Login.LogInTestBaseClass@66a3ffec]" name="lauchAppforLogin" is-config="true" duration-ms="54938" started-at="2018-07-30T19:46:07Z" finished-at="2018-07-30T19:47:02Z">
+        <test-method status="PASS" signature="lauchAppforLogin()[pri:0, instance:tests.Login.LogInTestBaseClass@66a3ffec]" name="lauchAppforLogin" is-config="true" duration-ms="218405" started-at="2018-07-30T22:20:44Z" finished-at="2018-07-30T22:24:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchAppforLogin -->
-        <test-method status="PASS" signature="LoginUsingUsername()[pri:0, instance:tests.Login.LogInTestBaseClass@66a3ffec]" name="LoginUsingUsername" duration-ms="4363" started-at="2018-07-30T19:47:02Z" finished-at="2018-07-30T19:47:06Z">
+        <test-method status="PASS" signature="LoginUsingUsername()[pri:0, instance:tests.Login.LogInTestBaseClass@66a3ffec]" name="LoginUsingUsername" duration-ms="6529" started-at="2018-07-30T22:24:23Z" finished-at="2018-07-30T22:24:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginUsingUsername -->

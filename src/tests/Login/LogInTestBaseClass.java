@@ -11,7 +11,6 @@ import org.testng.asserts.SoftAssert;
 
 import pageObjects.*;
 import basicConfig.*;
-import io.appium.java_client.android.AndroidDriver;
 
 public class LogInTestBaseClass {
 	
@@ -29,10 +28,12 @@ public class LogInTestBaseClass {
 	}
     
     @Test
-    public void LoginUsingUsername(){
+    public void LoginUsingUserID(){
     	loginFlow.homePage.appointmentTab.click();
        	loginFlow.homePage.loginButton.click();
-
+       	loginFlow.loginPage.userIdField.sendKeys("abc");
+       	loginFlow.loginPage.passwordField.sendKeys("test");
+       	loginFlow.loginPage.logInButton.click();
     }
 	
 	

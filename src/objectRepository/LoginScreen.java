@@ -10,13 +10,13 @@ public class LoginScreen {
 	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/et_username")
 	public WebElement userIdLabel;
 	
-	@FindBy(xpath="//TextInputLayout[@contains('resource-id','com.mphrx.columbiaAsia.patient.debug:id/et_username')]/android.widget.FrameLayout/android.widget.EditText")
+	@FindBy(xpath="//TextInputLayout[@text='User ID']/android.widget.FrameLayout/android.widget.EditText")
 	public WebElement userIdField;
 	
 	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/et_pass")
 	public WebElement passwordLabel;
 	
-	@FindBy(xpath="//TextInputLayout[@contains('resource-id','com.mphrx.columbiaAsia.patient.debug:id/et_pass')]/android.widget.FrameLayout/android.widget.EditText")
+	@FindBy(xpath="//TextInputLayout[@text='Password']/android.widget.FrameLayout/android.widget.EditText")
 	public WebElement passwordField;
 	
 	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/btn_forgot_id")
