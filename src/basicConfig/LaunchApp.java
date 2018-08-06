@@ -21,6 +21,7 @@ public class LaunchApp {
 	//public static void main(String[] args){
 	private AndroidDriver launchApp(){
 		prop = sysLoc.getConfigLocation();
+		capabilities.setCapability("adbPort", "5038");
 		capabilities.setCapability("platformName"	, prop.getProperty("platform"));
 		capabilities.setCapability("automationName", "UiAutomator2");
 		capabilities.setCapability("deviceName", prop.getProperty("deviceName"));
