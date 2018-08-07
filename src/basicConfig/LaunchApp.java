@@ -21,11 +21,13 @@ public class LaunchApp {
 	//public static void main(String[] args){
 	private AndroidDriver launchApp(){
 		prop = sysLoc.getConfigLocation();
-		capabilities.setCapability("adbPort", "5038");
+		capabilities.setCapability("adbPort", 5039);
 		capabilities.setCapability("platformName"	, prop.getProperty("platform"));
 		capabilities.setCapability("automationName", "UiAutomator2");
 		capabilities.setCapability("deviceName", prop.getProperty("deviceName"));
 		capabilities.setCapability("app", prop.getProperty("app"));
+		capabilities.setCapability("autoGrantPermissions", true);
+		
 		try {
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		} catch (MalformedURLException e) {

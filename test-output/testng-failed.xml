@@ -6,6 +6,7 @@
       <class name="tests.Login.LogInTestBaseClass">
         <methods>
           <include name="lauchAppforLogin"/>
+          <include name="LLoginUsingUserID"/>
           <include name="LoginUsingUserID"/>
         </methods>
       </class> <!-- tests.Login.LogInTestBaseClass -->
