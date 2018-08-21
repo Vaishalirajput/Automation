@@ -15,7 +15,7 @@ public class LogOut {
        	size = driver.manage().window().getSize();
        	int starty = (int) (size.height * 0.8);
        	int endy = (int) (size.height * 0.6);
-       	int startx = (int)(size.width * 0.19722222222222222222222222222222);
+       	int startx = (int)(size.width * 0.19);
        	
         driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc='Drawer_Opened']")).click();
         TouchA.swipe(startx, starty, startx, endy, 1000);

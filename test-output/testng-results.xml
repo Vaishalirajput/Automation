@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40217" started-at="2018-08-07T14:46:01Z" finished-at="2018-08-07T14:46:41Z">
+  <suite name="Default suite" duration-ms="19522" started-at="2018-08-21T07:56:56Z" finished-at="2018-08-21T07:57:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40217" started-at="2018-08-07T14:46:01Z" finished-at="2018-08-07T14:46:41Z">
+    <test name="Default test" duration-ms="19522" started-at="2018-08-21T07:56:56Z" finished-at="2018-08-21T07:57:15Z">
       <class name="tests.Login.LogInTestBaseClass">
-        <test-method status="PASS" signature="lauchAppforLogin()[pri:0, instance:tests.Login.LogInTestBaseClass@7cd62f43]" name="lauchAppforLogin" is-config="true" duration-ms="136586" started-at="2018-08-07T20:13:44Z" finished-at="2018-08-07T20:16:01Z">
+        <test-method status="PASS" signature="lauchAppforLogin()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="lauchAppforLogin" is-config="true" duration-ms="108973" started-at="2018-08-21T13:25:07Z" finished-at="2018-08-21T13:26:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchAppforLogin -->
-        <test-method status="PASS" signature="LLoginUsingUserID()[pri:0, instance:tests.Login.LogInTestBaseClass@7cd62f43]" name="LLoginUsingUserID" duration-ms="19826" started-at="2018-08-07T20:16:01Z" finished-at="2018-08-07T20:16:21Z">
+        <test-method status="PASS" signature="homeScreenUIValidation()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="homeScreenUIValidation" duration-ms="18" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LLoginUsingUserID -->
-        <test-method status="PASS" signature="LoginUsingUserID()[pri:0, instance:tests.Login.LogInTestBaseClass@7cd62f43]" name="LoginUsingUserID" duration-ms="20203" started-at="2018-08-07T20:16:21Z" finished-at="2018-08-07T20:16:41Z">
+        </test-method> <!-- homeScreenUIValidation -->
+        <test-method status="PASS" signature="logInScreenUIValidation()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInScreenUIValidation" duration-ms="9" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginUsingUserID -->
+        </test-method> <!-- logInScreenUIValidation -->
+        <test-method status="PASS" signature="logInUsingInvalidPassword()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInUsingInvalidPassword" duration-ms="34" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUsingInvalidPassword -->
+        <test-method status="PASS" signature="logInUsingInvalidUserId()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInUsingInvalidUserId" duration-ms="6" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInUsingInvalidUserId -->
+        <test-method status="PASS" signature="loginUsingValidUserID()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="loginUsingValidUserID" duration-ms="19331" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:27:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUsingValidUserID -->
       </class> <!-- tests.Login.LogInTestBaseClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

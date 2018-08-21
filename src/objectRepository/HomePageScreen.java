@@ -25,4 +25,6 @@ public class HomePageScreen {
 	
 	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/btn_action_end")
 	public WebElement signUpButton;
+	
+
 }

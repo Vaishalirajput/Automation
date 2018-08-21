@@ -5,9 +5,12 @@
     <classes>
       <class name="tests.Login.LogInTestBaseClass">
         <methods>
+          <include name="loginUsingValidUserID"/>
           <include name="lauchAppforLogin"/>
-          <include name="LLoginUsingUserID"/>
-          <include name="LoginUsingUserID"/>
+          <include name="logInUsingInvalidPassword"/>
+          <include name="logInUsingInvalidUserId"/>
+          <include name="homeScreenUIValidation"/>
+          <include name="logInScreenUIValidation"/>
         </methods>
       </class> <!-- tests.Login.LogInTestBaseClass -->
     </classes>
