@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19522" started-at="2018-08-21T07:56:56Z" finished-at="2018-08-21T07:57:15Z">
+  <suite name="Default suite" duration-ms="19158" started-at="2018-08-21T11:06:39Z" finished-at="2018-08-21T11:06:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19522" started-at="2018-08-21T07:56:56Z" finished-at="2018-08-21T07:57:15Z">
+    <test name="Default test" duration-ms="19158" started-at="2018-08-21T11:06:39Z" finished-at="2018-08-21T11:06:59Z">
       <class name="tests.Login.LogInTestBaseClass">
-        <test-method status="PASS" signature="lauchAppforLogin()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="lauchAppforLogin" is-config="true" duration-ms="108973" started-at="2018-08-21T13:25:07Z" finished-at="2018-08-21T13:26:56Z">
+        <test-method status="PASS" signature="lauchAppforLogin()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="lauchAppforLogin" is-config="true" duration-ms="103506" started-at="2018-08-21T16:34:56Z" finished-at="2018-08-21T16:36:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lauchAppforLogin -->
-        <test-method status="PASS" signature="homeScreenUIValidation()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="homeScreenUIValidation" duration-ms="18" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
+        <test-method status="PASS" signature="homeScreenUIValidation()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="homeScreenUIValidation" duration-ms="37" started-at="2018-08-21T16:36:39Z" finished-at="2018-08-21T16:36:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homeScreenUIValidation -->
-        <test-method status="PASS" signature="logInScreenUIValidation()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInScreenUIValidation" duration-ms="9" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
+        <test-method status="PASS" signature="logInScreenUIValidation()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInScreenUIValidation" duration-ms="5116" started-at="2018-08-21T16:36:39Z" finished-at="2018-08-21T16:36:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInScreenUIValidation -->
-        <test-method status="PASS" signature="logInUsingInvalidPassword()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInUsingInvalidPassword" duration-ms="34" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
+        <test-method status="PASS" signature="logInUsingInvalidPassword()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInUsingInvalidPassword" duration-ms="4" started-at="2018-08-21T16:36:45Z" finished-at="2018-08-21T16:36:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInUsingInvalidPassword -->
-        <test-method status="PASS" signature="logInUsingInvalidUserId()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInUsingInvalidUserId" duration-ms="6" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:26:56Z">
+        <test-method status="PASS" signature="logInUsingInvalidUserId()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="logInUsingInvalidUserId" duration-ms="7" started-at="2018-08-21T16:36:45Z" finished-at="2018-08-21T16:36:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInUsingInvalidUserId -->
-        <test-method status="PASS" signature="loginUsingValidUserID()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="loginUsingValidUserID" duration-ms="19331" started-at="2018-08-21T13:26:56Z" finished-at="2018-08-21T13:27:15Z">
+        <test-method status="PASS" signature="loginUsingValidUserID()[pri:0, instance:tests.Login.LogInTestBaseClass@73ad2d6]" name="loginUsingValidUserID" duration-ms="13875" started-at="2018-08-21T16:36:45Z" finished-at="2018-08-21T16:36:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUsingValidUserID -->

@@ -1,6 +1,0 @@
-2018-08-21 13:26:52,513 [main] INFO  Login.LogInTestBaseClass - driver initialized successfully
-2018-08-21 13:26:56,186 [main] INFO  Login.LogInTestBaseClass - inside1
-2018-08-21 13:26:56,203 [main] INFO  Login.LogInTestBaseClass - inside2
-2018-08-21 13:26:56,249 [main] INFO  Login.LogInTestBaseClass - inside4
-2018-08-21 13:26:56,264 [main] INFO  Login.LogInTestBaseClass - inside3
-2018-08-21 13:26:56,284 [main] INFO  Login.LogInTestBaseClass - inside5
