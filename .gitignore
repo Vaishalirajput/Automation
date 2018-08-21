@@ -9,3 +9,7 @@ src/credentials/*
 
 #Ignore all config file
 conf/*
+
+target
+
+#local-dev
