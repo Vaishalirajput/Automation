@@ -13,6 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+
+import basicConfig.LaunchApp;
+
 
 
 public class TouchA {
@@ -69,4 +74,20 @@ public class TouchA {
         pr.waitFor(10, TimeUnit.SECONDS);
         return pr;
     }
+    
+    private static int getAbsoluteValueOfX(int x){
+    	WebDriver driver = (WebDriver)LaunchApp.getDriver();
+    	Dimension size = driver.manage().window().getSize();
+    	int startx = (int)(size.width * 0.19);
+    	return startx;
+    }
+    
+    private static int getAbsoluteValueOfY(int y){
+    	WebDriver driver = (WebDriver)LaunchApp.getDriver();
+    	Dimension size = driver.manage().window().getSize();
+       	int starty = (int) (size.height * 0.8);
+       	return starty;
+    }
+    
+    
 }

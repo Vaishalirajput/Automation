@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 
+
 import basicConfig.LaunchApp;
 
 public class LogOut {
@@ -12,7 +13,6 @@ public class LogOut {
 	{   		
 		WebDriver driver = (WebDriver)LaunchApp.getDriver();
 		Dimension size = driver.manage().window().getSize();
-       	size = driver.manage().window().getSize();
        	int starty = (int) (size.height * 0.8);
        	int endy = (int) (size.height * 0.6);
        	int startx = (int)(size.width * 0.19);

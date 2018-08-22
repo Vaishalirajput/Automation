@@ -5,12 +5,10 @@
     <classes>
       <class name="tests.Login.LogInTestBaseClass">
         <methods>
-          <include name="loginUsingValidUserID"/>
           <include name="lauchAppforLogin"/>
-          <include name="logInUsingInvalidPassword"/>
-          <include name="logInUsingInvalidUserId"/>
-          <include name="homeScreenUIValidation"/>
-          <include name="logInScreenUIValidation"/>
+          <include name="loginWithoutEnteringCredentials"/>
+          <include name="loginUsingInvalidCredentials"/>
+          <include name="loginUsingBlockedUserCredentials"/>
         </methods>
       </class> <!-- tests.Login.LogInTestBaseClass -->
     </classes>

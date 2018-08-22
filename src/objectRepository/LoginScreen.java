@@ -30,4 +30,10 @@ public class LoginScreen {
 	
 	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/btn_footer_next")
 	public WebElement logInButton;
+	
+	@FindBy(xpath="//android.widget.TextView[@text='Please enter your User ID.']")
+	public WebElement userIdBlankErrorMessage;
+	
+	@FindBy(xpath="//android.widget.TextView[@text='Please enter your password.']")
+	public WebElement passwordBlankErrorMessage;
 }
