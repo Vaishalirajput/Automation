@@ -18,6 +18,10 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
 import static dataRepository.LoginPageData.*;
+import static dataRepository.ForgotUserIdPageData.*;
+import static dataRepository.ForgotPasswordPageData.*;
+import static dataRepository.SignUpPageData.*;
+
 import static credentials.LoginCredentials.*;
 
 public class LogInTestBaseClass {
@@ -85,51 +89,79 @@ public class LogInTestBaseClass {
     
     @Test
     public void verifyForgotPasswordButton(){
-    	Boolean forgotPasswordButton = loginFlow.loginPage.forgotPasswordLink.isDisplayed();
-    	if(forgotPasswordButton == true)
-    	{
-    	log.info("ForgotPassword button is displayed on the screen");
-    	}
-    	else {
-    		log.info("ForgotPassword button is not displayed on the screen");
-    	}
+    	log.info("TC_05: To verify Forgot password Button and its text.");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    	String forgotPasswordLabel = loginFlow.loginPage.forgotPasswordLink.getText();
+    	Assert.assertEquals(forgotPasswordLabel, FORGOT_USERID_LINK_TEXT);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
+    
     @Test
     public void verifySignUpButton(){
-    	Boolean signUpButton = loginFlow.loginPage.signUpButton.isDisplayed();
-    	if(signUpButton == true)
-    	{
-    	log.info("signUpButton is displayed on the screen");
-    	}
-    	else {
-    		log.info("signUpButton is not displayed on the screen");
-    	}
+    	log.info("TC_06: To verify Sign Up Button and its text.");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    	String signUpButton = loginFlow.loginPage.signUpButton.getText();
+    	Assert.assertEquals(signUpButton, SIGNUP_BUTTON_TEXT);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
     @Test
     public void verifyLoginButton(){
-    	Boolean loginButton = loginFlow.loginPage.logInButton.isDisplayed();
-    	if(loginButton == true)
-    	{
-    	log.info("loginButton is displayed on the screen");
-    	}
-    	else {
-    		log.info("loginButton is not displayed on the screen");
-    	}
+    	log.info("TC_07: To verify Login Button and its text.");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    	String loginButton = loginFlow.loginPage.logInButton.getText();
+    	Assert.assertEquals(loginButton, LOGIN_BUTTON_TEXT);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
     @Test
 	public void forgotUserIDButtonClickAction(){
-		log.info("forgot User ID button tappable verification");
-		loginFlow.loginPage.forgotUsetIdLink.click();
-		System.out.println(driver.currentActivity());
-
-     //we are here
+		log.info("TC_08 & TC_09: Forgot User ID button tappable verification and redirection from retrieve userid to login screen");
+		loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+       	loginFlow.loginPage.forgotUsetIdLink.click();
+       	String forgotUserIDScreenHeader  = 	loginFlow.forgotUserIDPage.userIDScreenHeader.getText();
+       	Assert.assertEquals(forgotUserIDScreenHeader, FORGOT_USERID_HEADER);
+       	loginFlow.forgotUserIDPage.forgotUserIdBackButton.click();
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
 	}
+    
+    @Test
+	public void forgotPasswordButtonClickAction(){
+		log.info("TC_11 & TC_12: Forgot Password button tappable verification and redirection from retrieve password to login screen");
+		loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+       	loginFlow.loginPage.forgotPasswordLink.click();
+       	String forgotPasswordScreenHeader  = 	loginFlow.forgotPasswordPage.passwordScreenHeader.getText();
+       	Assert.assertEquals(forgotPasswordScreenHeader, FORGOT_PASSWORD_HEADER);
+       	loginFlow.forgotPasswordPage.forgotPasswordBackButton.click();
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
+	}
+  
+	@Test
+	public void signUpButtonClickAction(){
+		log.info("TC_14 & 15: Sign up button tappable verification and redirection from Sign up screen to login screen");
+		loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+       	loginFlow.loginPage.signUpButton.click();
+       	String signUpScreenHeader = loginFlow.signUpScreenPage.signUPScreenHeader.getText();
+       	Assert.assertEquals(signUpScreenHeader, SIGN_UP_HEADER);
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
+	}
+
     
 	@Test
 	public void loginButtonClickAction(){
