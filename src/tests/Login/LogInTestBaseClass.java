@@ -35,55 +35,51 @@ public class LogInTestBaseClass {
 		loginFlow.launchScreen.skipButton.click();
 	}
     
-    @Test (priority = 0)	
+    @Test 	
     public void verifyCALogo(){
+    	log.info("TC_01: To verify the CA logo.");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
     	Boolean logoDisplayed = loginFlow.loginPage.caLOGO.isDisplayed();
-    	if(logoDisplayed == true)
-    	{
-    	log.info("Logo is displayed on the screen");
-    	}
-    	else {
-    		log.info("Logo is not displayed on the screen");
-    	}
+    	Assert.assertEquals(logoDisplayed.booleanValue(),true);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
-    @Test (priority = 1)	
+    @Test	
     public void verifyUserIDLabel(){
-    	Boolean userIDLable = loginFlow.loginPage.userIdLabel.isDisplayed();
-    	if(userIDLable == true)
-    	{
-    	log.info("User ID lable is displayed on the screen");
-    	}
-    	else {
-    		log.info("User ID lable is not displayed on the screen");
-    	}
+    	log.info("TC_02: To verify the User ID label and its text");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    	String userIDLable = loginFlow.loginPage.userIdLabel.getText();
+    	Assert.assertEquals(userIDLable,USERID_LABEL);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
-    @Test (priority = 2)	
+    @Test
     public void verifyForgotUserIDButton(){
-    	Boolean forgotUserIDButton = loginFlow.loginPage.forgotUsetIdLink.isDisplayed();
-    	if(forgotUserIDButton == true)
-    	{
-    	log.info("forgotUserIDButton is displayed on the screen");
-    	}
-    	else {
-    		log.info("forgotUserIDButton is not displayed on the screen");
-    	}
+    	log.info("TC_03: To verify the Forgot User ID button and its text");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    	String forgotUserIDButton = loginFlow.loginPage.forgotUsetIdLink.getText();
+    	Assert.assertEquals(forgotUserIDButton,FORGOT_USERID_LINK_TEXT);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
     @Test
     public void verifyPasswordLabel(){
-    	Boolean passwordLabel = loginFlow.loginPage.passwordLabel.isDisplayed();
-    	if(passwordLabel == true)
-    	{
-    	log.info("passwordLabel is displayed on the screen");
-    	}
-    	else {
-    		log.info("passwordLabel is not displayed on the screen");
-    	}
+    	log.info("TC_04: To verify the password label and its text.");
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    	String passwordLabel = loginFlow.loginPage.passwordLabel.getText();
+    	Assert.assertEquals(passwordLabel,PASSWORD_LABEL);
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
     	
     }
     
