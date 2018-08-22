@@ -164,6 +164,7 @@ public class LogInTestBaseClass {
        	String signUpScreenHeader = loginFlow.signUpScreenPage.signUPScreenHeader.getText();
        	Assert.assertEquals(signUpScreenHeader, SIGN_UP_HEADER);
        	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
 	}
 
