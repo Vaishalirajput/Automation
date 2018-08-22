@@ -11,5 +11,7 @@ src/credentials/*
 conf/*
 
 target
+my.txt
+test-output
 
 #local-dev

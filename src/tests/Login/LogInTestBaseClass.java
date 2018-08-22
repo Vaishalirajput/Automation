@@ -9,12 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import modules.*;
 import utilities.*;
 import basicConfig.*;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 import static dataRepository.LoginPageData.*;
 import static credentials.LoginCredentials.*;
@@ -140,7 +141,7 @@ public class LogInTestBaseClass {
 		loginFlow.homePage.appointmentTab.click();
        	loginFlow.homePage.loginButton.click();
        	Assert.assertEquals(driver.currentActivity(),LOGIN_SCREEN_ACTIVITY);
-       	driver.navigate().back();
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
 	}
 	
@@ -161,7 +162,7 @@ public class LogInTestBaseClass {
 	}
 	
 	@Test //need to fix
-	public void loginUsingInvalidCredentials()
+	public void loginUsingInvalidCredentials() throws InterruptedException
 	{
 		log.info("TC_19: User credential verification using invalid credentials");
 		loginFlow.homePage.appointmentTab.click();
@@ -171,7 +172,8 @@ public class LogInTestBaseClass {
        	log.info("entering user password");
        	loginFlow.loginPage.passwordField.sendKeys(INVALID_PASSWORD);
        	loginFlow.loginPage.logInButton.click();
-       	driver.navigate().back();
+       	Thread.sleep(20000);
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
        
 	}
@@ -184,7 +186,7 @@ public class LogInTestBaseClass {
        	loginFlow.loginPage.logInButton.click();
        	Assert.assertEquals(loginFlow.loginPage.userIdBlankErrorMessage.getText(),USERID_BLANK_ERROR);
        	Assert.assertEquals(loginFlow.loginPage.passwordBlankErrorMessage.getText(),PASSWORD_BLANK_ERROR);
-       	driver.navigate().back();
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
 	}
 	
@@ -196,7 +198,7 @@ public class LogInTestBaseClass {
        	loginFlow.loginPage.userIdField.sendKeys(VALID_USERNAME);
        	loginFlow.loginPage.logInButton.click();
        	Assert.assertEquals(loginFlow.loginPage.passwordBlankErrorMessage.getText(),PASSWORD_BLANK_ERROR);
-       	driver.navigate().back();
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
 	}
 	
@@ -208,13 +210,13 @@ public class LogInTestBaseClass {
        	loginFlow.loginPage.passwordField.sendKeys(VALID_PASSWORD);
        	loginFlow.loginPage.logInButton.click();
        	Assert.assertEquals(loginFlow.loginPage.userIdBlankErrorMessage.getText(),USERID_BLANK_ERROR);
-       	driver.navigate().back();
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
         
 	}
 	
 	@Test
-	public void loginUsingBlockedUserCredentials(){
+	public void loginUsingBlockedUserCredentials() throws InterruptedException{
 		log.info("TC_25: To validate the Login with an inactive/blocked user credentials");
 		loginFlow.homePage.appointmentTab.click();
        	loginFlow.homePage.loginButton.click();
@@ -223,8 +225,8 @@ public class LogInTestBaseClass {
        	log.info("entering user password");
        	loginFlow.loginPage.passwordField.sendKeys("blocked");
        	loginFlow.loginPage.logInButton.click();
-       	log.info("to be done");
-       	driver.navigate().back();
+       	Thread.sleep(20000);
+       	driver.pressKey(new KeyEvent(AndroidKey.BACK));
         loginFlow.homePage.loginWindowCrossButton.click();
 	}
 	
