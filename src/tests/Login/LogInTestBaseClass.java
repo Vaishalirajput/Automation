@@ -34,6 +34,105 @@ public class LogInTestBaseClass {
 		loginFlow.launchScreen.skipButton.click();
 	}
     
+    @Test (priority = 0)	
+    public void verifyCALogo(){
+    	Boolean logoDisplayed = loginFlow.loginPage.caLOGO.isDisplayed();
+    	if(logoDisplayed == true)
+    	{
+    	log.info("Logo is displayed on the screen");
+    	}
+    	else {
+    		log.info("Logo is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test (priority = 1)	
+    public void verifyUserIDLabel(){
+    	Boolean userIDLable = loginFlow.loginPage.userIdLabel.isDisplayed();
+    	if(userIDLable == true)
+    	{
+    	log.info("User ID lable is displayed on the screen");
+    	}
+    	else {
+    		log.info("User ID lable is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test (priority = 2)	
+    public void verifyForgotUserIDButton(){
+    	Boolean forgotUserIDButton = loginFlow.loginPage.forgotUsetIdLink.isDisplayed();
+    	if(forgotUserIDButton == true)
+    	{
+    	log.info("forgotUserIDButton is displayed on the screen");
+    	}
+    	else {
+    		log.info("forgotUserIDButton is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test
+    public void verifyPasswordLabel(){
+    	Boolean passwordLabel = loginFlow.loginPage.passwordLabel.isDisplayed();
+    	if(passwordLabel == true)
+    	{
+    	log.info("passwordLabel is displayed on the screen");
+    	}
+    	else {
+    		log.info("passwordLabel is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test
+    public void verifyForgotPasswordButton(){
+    	Boolean forgotPasswordButton = loginFlow.loginPage.forgotPasswordLink.isDisplayed();
+    	if(forgotPasswordButton == true)
+    	{
+    	log.info("ForgotPassword button is displayed on the screen");
+    	}
+    	else {
+    		log.info("ForgotPassword button is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test
+    public void verifySignUpButton(){
+    	Boolean signUpButton = loginFlow.loginPage.signUpButton.isDisplayed();
+    	if(signUpButton == true)
+    	{
+    	log.info("signUpButton is displayed on the screen");
+    	}
+    	else {
+    		log.info("signUpButton is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test
+    public void verifyLoginButton(){
+    	Boolean loginButton = loginFlow.loginPage.logInButton.isDisplayed();
+    	if(loginButton == true)
+    	{
+    	log.info("loginButton is displayed on the screen");
+    	}
+    	else {
+    		log.info("loginButton is not displayed on the screen");
+    	}
+    	
+    }
+    
+    @Test
+	public void forgotUserIDButtonClickAction(){
+		log.info("forgot User ID button tappable verification");
+		loginFlow.loginPage.forgotUsetIdLink.click();
+		System.out.println(driver.currentActivity());
+
+     //we are here
+	}
     
 	@Test
 	public void loginButtonClickAction(){
@@ -120,9 +219,9 @@ public class LogInTestBaseClass {
 		loginFlow.homePage.appointmentTab.click();
        	loginFlow.homePage.loginButton.click();
        	log.info("entering user id");
-       	loginFlow.loginPage.userIdField.sendKeys(BLOCKED_USERNAME);
+       	loginFlow.loginPage.userIdField.sendKeys("blocked");
        	log.info("entering user password");
-       	loginFlow.loginPage.passwordField.sendKeys(BLOCKED_PASSWORD);
+       	loginFlow.loginPage.passwordField.sendKeys("blocked");
        	loginFlow.loginPage.logInButton.click();
        	log.info("to be done");
        	driver.navigate().back();
