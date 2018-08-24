@@ -7,7 +7,9 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import modules.*;
@@ -29,7 +31,7 @@ public class LogInTestBaseClass {
 	public static  AndroidDriver driver = null; 
 	LoginFlow loginFlow;
 	static Logger log = Logger.getLogger(LogInTestBaseClass.class.getName());
-	
+
     @BeforeSuite
 	public void lauchAppforLogin(){
     	driver = LaunchApp.getDriver();
@@ -39,30 +41,35 @@ public class LogInTestBaseClass {
 		loginFlow.launchScreen.skipButton.click();
 	}
 
+    @BeforeMethod
+    public void beforeTestMethod()
+    {
+    	loginFlow.homePage.appointmentTab.click();
+       	loginFlow.homePage.loginButton.click();
+    }
+   
+    private void navigateToHomeScreen(){
+    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        loginFlow.homePage.loginWindowCrossButton.click();
+    }
+    
     @Test 	
     public void verifyCALogo(){
     	log.info("TC_01: To verify the CA logo.");
-    	loginFlow.homePage.appointmentTab.click();
-       	loginFlow.homePage.loginButton.click();
     	Boolean logoDisplayed = loginFlow.loginPage.caLOGO.isDisplayed();
     	Assert.assertEquals(logoDisplayed.booleanValue(),true);
-    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
-        loginFlow.homePage.loginWindowCrossButton.click();
-    	
+    	navigateToHomeScreen();    	
     }
     
     @Test	
     public void verifyUserIDLabel(){
     	log.info("TC_02: To verify the User ID label and its text");
-    	loginFlow.homePage.appointmentTab.click();
-       	loginFlow.homePage.loginButton.click();
     	String userIDLable = loginFlow.loginPage.userIdLabel.getText();
     	Assert.assertEquals(userIDLable,USERID_LABEL);
-    	driver.pressKey(new KeyEvent(AndroidKey.BACK));
-        loginFlow.homePage.loginWindowCrossButton.click();
+    	navigateToHomeScreen();
     	
     }
-    
+ /*   
     @Test
     public void verifyForgotUserIDButton(){
     	log.info("TC_03: To verify the Forgot User ID button and its text");
@@ -343,6 +350,18 @@ public class LogInTestBaseClass {
         Assert.assertEquals(driver.findElement(By.id("com.mphrx.columbiaAsia.patient.debug:id/toolbar_title")).isDisplayed(), true);
        	//TouchA.tap(950, 800);
        	LogOut.logout();
-	}
-
+	}*/
+/*
+	@Test
+	public void test(){
+		try{
+			Assert.assertEquals("qw","er");	
+		}catch(AssertionError e){
+		System.out.print("vaishali");
+		Assert.fail("this tc failed");
+			
+		}
+		
+		
+	}*/
 }
