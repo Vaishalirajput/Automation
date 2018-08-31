@@ -8,23 +8,47 @@ public class HomePageScreen {
 	@FindBy(xpath="//android.widget.TextView[@text='My Appointments']")
 	public WebElement appointmentTab; 
 	
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/design_bottom_sheet")
+	@FindBy(id="design_bottom_sheet")
 	public WebElement loginWindow;
 	
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/tv_title_login_proceed_as_guest")
+	@FindBy(id="tv_title_login_proceed_as_guest")
 	public WebElement loginWindowHeaderText;
 	
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/btn_bottom_sheet_cross")
+	@FindBy(id="btn_bottom_sheet_cross")
 	public WebElement loginWindowCrossButton;
 
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/tv_body_text")
+	@FindBy(id="tv_body_text")
 	public WebElement loginWindowBodyText;
 	
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/btn_action_start")
+	@FindBy(id="btn_action_start")
 	public WebElement loginButton;
 	
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/btn_action_end")
+	@FindBy(id="btn_action_end")
 	public WebElement signUpButton;
+	
+	//Appointment specific
+	@FindBy(id="tv_book_appointment")
+	public WebElement bookAppointmentLabel;
+	
+	@FindBy(id="ico_location")
+	public WebElement locationIcon;
+	
+	@FindBy(id="location_name")
+	public WebElement selectHospitalDropDownText;
+	
+	@FindBy(id="img_user")
+	public WebElement selectHospitalDropDownArrow;
+	
+	@FindBy(id="rel_physcian_or_speciality")
+	public WebElement doctorAndSpecialityField;
+	
+	@FindBy(id="phy_splty_name")
+	public WebElement doctorAndSpecialityFieldPlaceHolderText;
+	
+	
+	
+	
+	
 	
 
 }

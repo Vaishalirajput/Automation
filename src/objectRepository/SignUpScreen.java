@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class SignUpScreen {
 
-	@FindBy(id="com.mphrx.columbiaAsia.patient.debug:id/toolbar_title")
+	@FindBy(id="toolbar_title")
 	public WebElement signUPScreenHeader;
 	
 	@FindBy(className="android.widget.ImageButton")

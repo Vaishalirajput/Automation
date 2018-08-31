@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Login Suite" verbose="1" >
-  <test name="Login Test Cases">
-   <packages>
-      <package name="tests.Login" />
-   </packages>  
+  <test name="Login Test Cases"> 
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    
+    <classes>
+      <class name="tests.appointment.appointmentTestBaseClass"/>
+    </classes>
+    
+      
   </test>
 </suite>

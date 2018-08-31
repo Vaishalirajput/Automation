@@ -28,13 +28,14 @@ public class LaunchApp {
 		capabilities.setCapability("app", prop.getProperty("app"));
 		capabilities.setCapability("autoGrantPermissions", true);
 		
+		
 		try {
 			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
 		} catch (MalformedURLException e) {
 			System.out.print("driver cannot be initialized");
 			e.printStackTrace();
 		}
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		return driver;
 	}
 	
@@ -47,7 +48,18 @@ public class LaunchApp {
 				}
 			}
 		}
+		
 		return instance.driver;
+		
 	}
+	
+	/*
+	//capabilities.setCapability("noReset", true);
+	public static void setcaps(String key, Boolean value) throws MalformedURLException{
+		instance.capabilities.setCapability("noReset", true);
+		instance.driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),instance.capabilities);
+	}*/
+
+
 
 }
