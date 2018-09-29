@@ -34,7 +34,7 @@ public class GetDataBaseConnection {
 	 * @param password "test"
 	 * @return MongoDatabase class object
 	 */
-   public MongoDatabase connectToDatabase(String host, String port, String dbName, String user, String password){
+   public static MongoDatabase connectToDatabase(String host, String port, String dbName, String user, String password){
 	   
 	   MongoClientURI connectionString = new MongoClientURI("mongodb://"+user+":"+password+"@"+host+":"+port+"/"+dbName);
 	   System.out.print(connectionString.getURI());

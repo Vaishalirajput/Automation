@@ -7,6 +7,8 @@ public class LaunchScreen {
 
 	@FindBy(id="btn_skip")
 	public WebElement skipButton;
+	
+	
 }
 
 

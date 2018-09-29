@@ -17,4 +17,6 @@ public class AppointmentFlow {
 		homePage = PageFactory.initElements(driver, HomePageScreen.class);
 		loginPage = PageFactory.initElements(driver, LoginScreen.class);
 	}
+	
+	
 }

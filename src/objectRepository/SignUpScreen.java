@@ -10,4 +10,8 @@ public class SignUpScreen {
 	
 	@FindBy(className="android.widget.ImageButton")
 	public WebElement signUpBackButton;
+	
+	@FindBy(id="tv_not_visited")
+	public WebElement caNotVisited;
+	
 }

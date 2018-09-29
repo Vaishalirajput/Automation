@@ -1,5 +1,7 @@
 package tests.appointment;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeSuite;
@@ -24,17 +26,24 @@ public class appointmentTestBaseClass {
 		PropertyConfigurator.configure(Consts.LOG_PROP_FILE_PATH);
 		log.info("driver initialized successfully");
 		appointmentFlow = new AppointmentFlow(driver);
-		appointmentFlow.launchScreen.skipButton.click();
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		//appointmentFlow.launchScreen.getSkipButton().click();
 		Utility.login();
+		
 		Thread.sleep(10000);
 		
 		Utility.logout();
+	}
+	
+	@Test
+	public void relaunchApp(){
+		System.out.println("my name is vaishali");
 	}
 	/*	
 	@Test
 	public void relaunchApp(){
 		Utility.relaunchApp();
-	}*/
+	}
 	
 	@Test(groups = { "sanity" })
 	public void testone(){
@@ -44,7 +53,7 @@ public class appointmentTestBaseClass {
 	@Test(groups = { "regression" })
 	public void testtwo(){
 		System.out.print("this is regression test");
-	}
+	}*/
 	
 	
 }
