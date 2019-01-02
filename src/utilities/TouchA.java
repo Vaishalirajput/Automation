@@ -6,9 +6,7 @@
  */
 
 package utilities;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -76,14 +74,14 @@ public class TouchA {
     }
     
     private static int getAbsoluteValueOfX(int x){
-    	WebDriver driver = (WebDriver)LaunchApp.getDriver();
+    	WebDriver driver = LaunchApp.getDriver();
     	Dimension size = driver.manage().window().getSize();
     	int startx = (int)(size.width * 0.19);
     	return startx;
     }
     
     private static int getAbsoluteValueOfY(int y){
-    	WebDriver driver = (WebDriver)LaunchApp.getDriver();
+    	WebDriver driver = LaunchApp.getDriver();
     	Dimension size = driver.manage().window().getSize();
        	int starty = (int) (size.height * 0.8);
        	return starty;

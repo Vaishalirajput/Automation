@@ -1,48 +1,48 @@
 package objectRepository;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class HomePageScreen {
 
-	@FindBy(xpath="//android.widget.TextView[@text='My Appointments']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='My Appointments']")
 	public WebElement appointmentTab; 
 	
-	@FindBy(id="design_bottom_sheet")
+	@AndroidFindBy(id="design_bottom_sheet")
 	public WebElement loginWindow;
 	
-	@FindBy(id="tv_title_login_proceed_as_guest")
+	@AndroidFindBy(id="tv_title_login_proceed_as_guest")
 	public WebElement loginWindowHeaderText;
 	
-	@FindBy(id="btn_bottom_sheet_cross")
+	@AndroidFindBy(id="btn_bottom_sheet_cross")
 	public WebElement loginWindowCrossButton;
 
-	@FindBy(id="tv_body_text")
+	@AndroidFindBy(id="tv_body_text")
 	public WebElement loginWindowBodyText;
 	
-	@FindBy(id="btn_action_start")
+	@AndroidFindBy(id="btn_action_start")
 	public WebElement loginButton;
 	
-	@FindBy(id="btn_action_end")
+	@AndroidFindBy(id="btn_action_end")
 	public WebElement signUpButton;
 	
 	//Appointment specific
-	@FindBy(id="tv_book_appointment")
+	@AndroidFindBy(id="tv_book_appointment")
 	public WebElement bookAppointmentLabel;
 	
-	@FindBy(id="ico_location")
+	@AndroidFindBy(id="ico_location")
 	public WebElement locationIcon;
 	
-	@FindBy(id="location_name")
+	@AndroidFindBy(id="location_name")
 	public WebElement selectHospitalDropDownText;
 	
-	@FindBy(id="img_user")
+	@AndroidFindBy(id="img_user")
 	public WebElement selectHospitalDropDownArrow;
 	
-	@FindBy(id="rel_physcian_or_speciality")
+	@AndroidFindBy(id="rel_physcian_or_speciality")
 	public WebElement doctorAndSpecialityField;
 	
-	@FindBy(id="phy_splty_name")
+	@AndroidFindBy(id="phy_splty_name")
 	public WebElement doctorAndSpecialityFieldPlaceHolderText;
 	
 	

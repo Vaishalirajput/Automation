@@ -1,18 +1,18 @@
 package objectRepository;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class SearchHospitalScreen {
 
-	@FindBy(id="btn_back")
+	@AndroidFindBy(id="btn_back")
 	public WebElement backButton;
 	
-	@FindBy(id="et_search")
+	@AndroidFindBy(id="et_search")
 	public WebElement searchHospitalInputField;
 	
 	//to be fixed
-	@FindBy(xpath="//android.widget.TextView[@text='Whitefield']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Whitefield']")
 	public WebElement location;
 	
 

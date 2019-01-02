@@ -1,17 +1,26 @@
 package objectRepository;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class SignUpScreen {
 
-	@FindBy(id="toolbar_title")
+	@AndroidFindBy(id="toolbar_title")
 	public WebElement signUPScreenHeader;
 	
-	@FindBy(className="android.widget.ImageButton")
+	@AndroidFindBy(className="android.widget.ImageButton")
 	public WebElement signUpBackButton;
 	
-	@FindBy(id="tv_not_visited")
+	@AndroidFindBy(id="tv_not_visited")
 	public WebElement caNotVisited;
+	
+	@AndroidFindBy(id="tv_visited")
+	public WebElement caAlreadyVisited;
+	
+	@AndroidFindBy(id="tv_hav_mrn")
+	public WebElement patientHasMRN;	
+
+	@AndroidFindBy(id="tv_hav_no_mrn")
+	public WebElement patientHasNoMRN;	
 	
 }

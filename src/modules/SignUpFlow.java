@@ -13,6 +13,8 @@ public class SignUpFlow {
 	public PersonalDetailsScreen personalDetailsPage;
 	public EnterOTPScreen enterOTPPage;
 	public SetPasswordScreen setPasswordPage;
+	public EnterMRNScreen enterMRNScreen;
+	public SuccessScreen successPage;
 	
 	public SignUpFlow(WebDriver driver){
 		
@@ -22,5 +24,7 @@ public class SignUpFlow {
 		personalDetailsPage = PageFactory.initElements(driver, PersonalDetailsScreen.class);
 		enterOTPPage = PageFactory.initElements(driver, EnterOTPScreen.class);
 		setPasswordPage = PageFactory.initElements(driver, SetPasswordScreen.class);
+		enterMRNScreen = PageFactory.initElements(driver, EnterMRNScreen.class);
+		successPage = PageFactory.initElements(driver, SuccessScreen.class);
 	}
 }

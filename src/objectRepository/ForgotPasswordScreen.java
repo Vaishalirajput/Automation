@@ -1,14 +1,14 @@
 package objectRepository;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class ForgotPasswordScreen {
 	
-	@FindBy(id="toolbar_title")
+	@AndroidFindBy(id="toolbar_title")
 	public WebElement passwordScreenHeader;
 	
-	@FindBy(className="android.widget.ImageButton")
+	@AndroidFindBy(className="android.widget.ImageButton")
 	public WebElement forgotPasswordBackButton;
 	
 	

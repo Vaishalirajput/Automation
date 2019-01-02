@@ -1,40 +1,40 @@
 package objectRepository;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class LoginScreen {
 	
-	@FindBy(id="icon_client")
+	@AndroidFindBy(id="icon_client")
 	public WebElement caLOGO;
 	
-	@FindBy(id="et_username")
+	@AndroidFindBy(id="et_username")
 	public WebElement userIdLabel;
 	
-	@FindBy(xpath="//android.widget.FrameLayout[@index=1]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
+	@AndroidFindBy(xpath="//android.widget.FrameLayout[@index=1]/TextInputLayout/android.widget.FrameLayout/android.widget.EditText")
 	public WebElement userIdField;
 	
-	@FindBy(id="et_pass")
+	@AndroidFindBy(id="et_pass")
 	public WebElement passwordLabel;
 	
-	@FindBy(xpath="//TextInputLayout[@text='Password']/android.widget.FrameLayout/android.widget.EditText")
+	@AndroidFindBy(xpath="//TextInputLayout[@text='Password']/android.widget.FrameLayout/android.widget.EditText")
 	public WebElement passwordField;
 	
-	@FindBy(id="btn_forgot_id")
+	@AndroidFindBy(id="btn_forgot_id")
 	public WebElement forgotUsetIdLink;
 	
-	@FindBy(id="btn_forget_password")
+	@AndroidFindBy(id="btn_forget_password")
 	public WebElement forgotPasswordLink;
 	
-	@FindBy(id="btn_sign_up_footer")
+	@AndroidFindBy(id="btn_sign_up_footer")
 	public WebElement signUpButton;
 	
-	@FindBy(id="btn_footer_next")
+	@AndroidFindBy(id="btn_footer_next")
 	public WebElement logInButton;
 	
-	@FindBy(xpath="//android.widget.TextView[@text='Please enter your User ID.']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Please enter your User ID.']")
 	public WebElement userIdBlankErrorMessage;
 	
-	@FindBy(xpath="//android.widget.TextView[@text='Please enter your password.']")
+	@AndroidFindBy(xpath="//android.widget.TextView[@text='Please enter your password.']")
 	public WebElement passwordBlankErrorMessage;
 }

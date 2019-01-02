@@ -1,25 +1,25 @@
 package objectRepository;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class SelectDoctorScreen {
 
-	@FindBy(id="toolbar_title")
+	@AndroidFindBy(id="toolbar_title")
 	public WebElement headerText;
 	
-	/*@FindBy(id="btn_back")
+	/*@AndroidFindBy(id="btn_back")
 	public WebElement backButton;
 	
-	@FindBy(id="btn_back")
+	@AndroidFindBy(id="btn_back")
 	public WebElement backButton;
 	
-	@FindBy(id="btn_back")
+	@AndroidFindBy(id="btn_back")
 	public WebElement backButton;
 	
-	@FindBy(id="btn_back")
+	@AndroidFindBy(id="btn_back")
 	public WebElement backButton;
 	
-	@FindBy(id="btn_back")
+	@AndroidFindBy(id="btn_back")
 	public WebElement backButton;*/
 }
