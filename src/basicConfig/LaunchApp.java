@@ -23,13 +23,13 @@ public class LaunchApp {
 	//public static void main(String[] args){
 	private AndroidDriver launchApp(){
 		prop = sysLoc.getConfigLocation();
-		//File appDir = new File("apks");
-	   // File app = new File(appDir, prop.getProperty("app"));
+		File appDir = new File("apks");
+	    File app = new File(appDir, prop.getProperty("app"));
 		capabilities.setCapability("adbPort", 5039);
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME	,prop.getProperty("platform"));
-		capabilities.setCapability("automationName", "UiAutomator2");
-		capabilities.setCapability("deviceName", prop.getProperty("deviceName"));
-		capabilities.setCapability("app", prop.getProperty("app"));
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, prop.getProperty("deviceName"));
+		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		capabilities.setCapability("autoGrantPermissions", true);
 				
 		try {
@@ -47,7 +47,7 @@ public class LaunchApp {
 			synchronized (LaunchApp.class.getName()) {
 				if (instance == null) {
 					//AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
-					//service.start();
+					//service.start();  test
 					instance = new LaunchApp();
 					instance.launchApp();
 				}

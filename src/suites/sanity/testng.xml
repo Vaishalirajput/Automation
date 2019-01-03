@@ -4,7 +4,7 @@
   <test name="Login Test Cases"> 
     <groups>
       <run>
-        <include name="regression"/>
+        <include name="sanity"/>
       </run>
     </groups>
     
