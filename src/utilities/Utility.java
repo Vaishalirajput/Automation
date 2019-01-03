@@ -1,7 +1,6 @@
 package utilities;
 
-import static credentials.LoginCredentials.VALID_PASSWORD;
-import static credentials.LoginCredentials.VALID_USERNAME;
+import static credentials.LoginCredentials.*;
 
 import java.util.concurrent.TimeUnit;
 
